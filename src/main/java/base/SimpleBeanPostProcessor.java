@@ -7,6 +7,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
  * @author skywalker
  */
 public class SimpleBeanPostProcessor implements BeanPostProcessor {
+
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         return null;
@@ -16,4 +17,5 @@ public class SimpleBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         return null;
     }
+
 }

@@ -28,4 +28,5 @@ public class AopDemoAdvice implements MethodInterceptor {
     public Object invoke(MethodInvocation invocation) throws Throwable {
         return null;
     }
+
 }

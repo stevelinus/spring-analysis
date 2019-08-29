@@ -15,13 +15,16 @@ import org.springframework.context.annotation.Import;
 @Import(StudentConfig.class)
 public class SimpleBeanConfig {
 
+    private final StudentConfig studentConfig;
+
     @Autowired
-    private StudentConfig studentConfig;
+    public SimpleBeanConfig(StudentConfig studentConfig) {
+        this.studentConfig = studentConfig;
+    }
 
     @Bean
     public SimpleBean simpleBean() {
-        SimpleBean simpleBean = new SimpleBean(studentConfig.student());
-        return simpleBean;
+        return new SimpleBean(studentConfig.student());
     }
 
 }
